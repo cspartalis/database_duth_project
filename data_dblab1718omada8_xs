@@ -1,0 +1,269 @@
+/*DATA dblab1718omada8_xs*/
+
+SET FOREIGN_KEY_CHECKS=0;
+
+
+#BRANCH
+
+insert into BRANCH
+values (2541058698, 'Xanthi', 'Tsaldari', 58);
+
+insert into BRANCH
+values (2541069852, 'Xanthi', 'Tsimiski', 103);
+
+insert into BRANCH
+values (2510666777, 'Kavala', 'Burwnos', 5);
+
+insert into BRANCH
+values (2535055999, 'Komotini', 'Ag. Gewrgiou', 33);
+
+
+#CUSTOMER
+
+insert into CUSTOMER
+values (6981713158, 'Xristoforos Spartalis', 'Xanthi', 'Karaoli', 6);
+
+insert into CUSTOMER
+values (6988913688, 'Akis Lukiardopoulos', 'Xanthi', 'Karaoli', 15);
+
+insert into CUSTOMER
+values (6987568998, 'Hlias Papadeas', 'Xanthi', 'Mprokoumi', 26);
+
+insert into CUSTOMER
+values (2541078589, 'Xristoforos Spartalis', 'Xanthi', 'Karaoli', 6);
+
+insert into CUSTOMER
+values (6985689636, 'Hriana Theofilou', 'Komotini', 'Perikleous', 19);
+
+insert into CUSTOMER
+values (6988913699, 'Elena Papadopoulou', 'Komotini', 'Zaimi', 5);
+
+insert into CUSTOMER
+values (2535066898, 'Hriana Theofilou', 'Komotini', 'Perikleous', 19);
+
+insert into CUSTOMER
+values (6978562310, 'Akis Tsoxatzopoulos', 'Kavala', 'Xatzidaki', 67);
+
+insert into CUSTOMER
+values (2510758699, 'Ntora Mpelogianni', 'Kavala', 'Papandreou', 100);
+
+
+#INGR (MEAT)
+
+insert into INGR (name, price)
+values ('kotompeikon', 1.50);
+
+insert into INGR (name, price)
+values ('souvlaki kotopoulo', 1.30);
+
+insert into INGR (name, price)
+values ('souvlaki xoirino', 1.30);
+
+insert into INGR (name, price)
+values ('panseta', 2.30);
+
+insert into INGR (name, price)
+values ('guros kotopoulo', 2.30);
+
+insert into INGR (name, price)
+values ('guros xoirino', 2.30);
+
+
+#INGR (WRAP)
+
+insert into INGR (name, price)
+values ('pita', 0.00);
+
+insert into INGR (name, price)
+values ('psomaki', 0.00);
+
+insert into INGR (name, price)
+values ('lagana', 0.20);
+
+insert into INGR (name, price)
+values ('dipli pita', 0.20);
+
+insert into INGR (name, price)
+values ('kupriaki', 0.20);
+
+insert into INGR (name, price)
+values ('mpagketa', 0.30);
+
+insert into INGR (name, price)
+values ('tortigia', 0.30);
+
+
+#INGR (INGR)
+
+insert into INGR (name, price)
+values ('tomata', 0.00);
+
+insert into INGR (name, price)
+values ('kremmudi', 0.00);
+
+insert into INGR (name, price)
+values ('laxano', 0.00);
+
+insert into INGR (name, price)
+values ('marouli', 0.00);
+
+insert into INGR (name, price)
+values ('patates', 0.00);
+
+insert into INGR (name, price)
+values ('piperia', 0.10);
+
+insert into INGR (name, price)
+values ('kefaloturi', 0.10);
+
+
+#INGR (SAUCE)
+
+insert into INGR (name, price)
+values ('tzatziki', 0.20);
+
+insert into INGR (name, price)
+values ('turosalata', 0.20);
+
+insert into INGR (name, price)
+values ('paprika', 0.20);
+
+insert into INGR (name, price)
+values ('melitzanosalata', 0.20);
+
+insert into INGR (name, price)
+values ('sauce moustardas', 0.20);
+
+insert into INGR (name, price)
+values ('ouggareza', 0.20);
+
+insert into INGR (name, price)
+values ('giaourti', 0.20);
+
+insert into INGR (name, price)
+values ('sauce kantina', 0.30);
+
+
+#DRINK
+
+insert into DRINK (name, price)
+values ('xwris', 0.00);
+
+insert into DRINK (name, price)
+values ('nero 500ml', 0.50);
+
+insert into DRINK (name, price)
+values ('coca cola 330ml', 1.20);
+
+insert into DRINK (name, price)
+values ('portokalada 330ml', 1.20);
+
+insert into DRINK (name, price)
+values ('lemonada 330ml', 1.20);
+
+insert into DRINK (name, price)
+values ('soda 330ml', 1.20);
+
+insert into DRINK (name, price)
+values ('amstel 330ml', 1.00);
+
+insert into DRINK (name, price)
+values ('vergina 330ml', 0.80);
+
+
+#ORDERING
+
+insert into ORDERING (dt, is_ready, price, b_tel, c_tel)
+values ('2017-11-29 20:50:46', 1, 2.70, 2541058698, 2541078589);
+
+insert into ORDERING (dt, is_ready, price, b_tel, c_tel)
+values ('2017-11-29 21:05:32', 1, 2.90, 2541058698, 6987568998);
+
+insert into ORDERING (dt, is_ready, price, b_tel, c_tel)
+values ('2017-11-29 21:30:19', 1, 2.30, 2541058698, 6988913688);
+
+insert into ORDERING (dt, is_ready, price, b_tel, c_tel)
+values ('2017-11-30 13:02:30', 1, 2.30, 2541058698, 6981713158);
+
+insert into ORDERING (dt, is_ready, price, b_tel, c_tel)
+values ('2017-11-30 18:15:27', 0, 2.40, 2535055999, 6988913699);
+
+insert into ORDERING (dt, is_ready, price, b_tel, c_tel)
+values ('2017-11-30 18:20:46', 0, 7.20, 2541058698, 6981713158);
+
+
+#SANDWICH
+
+insert into SANDWICH (price) values (2.70);
+
+insert into SANDWICH (price) values (1.70);
+
+insert into SANDWICH (price) values (2.30);
+
+insert into SANDWICH (price) values (2.30);
+
+insert into SANDWICH (price) values (2.40);
+
+insert into SANDWICH (price) values (2.30);
+
+insert into SANDWICH (price) values (2.40);
+
+
+#CON_OF
+
+insert into CON_OF values (1, 5);
+insert into CON_OF values (1, 9);
+insert into CON_OF values (1, 18);
+insert into CON_OF values (1, 21);
+
+insert into CON_OF values (2, 1);
+insert into CON_OF values (2, 10);
+insert into CON_OF values (2, 18);
+
+insert into CON_OF values (3, 6);
+insert into CON_OF values (3, 7);
+insert into CON_OF values (3, 8);
+
+insert into CON_OF values (4, 6);
+insert into CON_OF values (4, 7);
+insert into CON_OF values (4, 8);
+
+insert into CON_OF values (5, 5);
+insert into CON_OF values (5, 7);
+insert into CON_OF values (5, 18);
+insert into CON_OF values (5, 20);
+
+insert into CON_OF values (6, 6);
+insert into CON_OF values (6, 7);
+insert into CON_OF values (6, 18);
+
+insert into CON_OF values (7, 6);
+insert into CON_OF values (7, 7);
+insert into CON_OF values (7, 18);
+insert into CON_OF values (7, 20);
+
+
+#HAS_S
+
+insert into HAS_S (o_id, s_id) values (1, 1);
+insert into HAS_S (o_id, s_id) values (2, 2);
+insert into HAS_S (o_id, s_id) values (3, 3);
+insert into HAS_S (o_id, s_id) values (4, 4);
+insert into HAS_S (o_id, s_id) values (5, 5);
+insert into HAS_S (o_id, s_id) values (6, 6);
+insert into HAS_S (o_id, s_id) values (6, 7);
+
+
+#HAS_D
+
+insert into HAS_D (o_id, d_id) values (1, 1);
+insert into HAS_D (o_id, d_id) values (2, 3);
+insert into HAS_D (o_id, d_id) values (3, 1);
+insert into HAS_D (o_id, d_id) values (4, 1);
+insert into HAS_D (o_id, d_id) values (5, 1);
+insert into HAS_D (o_id, d_id) values (6, 3);
+insert into HAS_D (o_id, d_id) values (6, 5);
+
+SET FOREIGN_KEY_CHECKS=1;
+
+commit;

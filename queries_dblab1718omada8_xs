@@ -1,0 +1,41 @@
+/*DATA MINING dblab1718omada8_xs*/
+
+/*1.The customers that are located in Xanthi*/
+
+SELECT * FROM CUSTOMER
+WHERE city='Xanthi';
+
+
+/*2.The id and the price of the orders that have to be prepared in the branch of Xanthi and where to be delivered*/
+
+SELECT o.id, o.price, c.city, c.road, c.number
+FROM ORDERING o, BRANCH b, CUSTOMER c
+WHERE o.b_tel=b.tel AND o.c_tel=c.tel
+AND o.is_ready=0 AND b.city='Xanthi';
+
+
+/*3.Order the orders according to the date and time that they have been made (most recent first)*/
+
+SELECT * FROM ORDERING
+ORDER BY dt DESC;
+
+
+/*4.The ingredients of the sandwiches that have to be prepared*/
+
+SELECT o.id, s.id, i.name
+FROM ORDERING o, HAS_S h, SANDWICH s, INGR i, CON_OF c
+WHERE o.id=h.o_id AND s.id=h.s_id 
+AND s.id=c.s_id AND i.id=c.i_id
+AND o.is_ready=0;
+
+
+/*5.The parts of the orders and their price in the branch of Xanthi (first the ones that aren't ready and most recent)*/
+
+SELECT o.id, o.is_ready, o.price, s.id, s.price, d.id, d.price
+FROM ORDERING o, HAS_S hs, SANDWICH s, HAS_D hd, DRINK d, BRANCH b
+WHERE o.id=hs.o_id AND s.id=hs.s_id 
+AND o.id=hd.o_id AND d.id=hd.d_id
+AND o.b_tel=b.tel
+AND b.city='Xanthi'
+ORDER BY is_ready, dt DESC;
+
